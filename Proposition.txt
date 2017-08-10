@@ -1,0 +1,41 @@
+ให้ทำ class DataManager
+- 1 method called BulkInsert
+void BulkInsert(IEnumerable<Person> persons)
+
+Person
+- Id int (PK Identity)
+- FirstName string
+- LastName string
+- Gender 
+GenderType(enum)
+- IsGay bool
+- IsLesbian  bool
+- IsLadyBoy  bool
+- IsTomBoy bool
+
+- 3 events
+
+- OnBulkInsertCompleted
+  อีเว้นจะเข้าเมื่อการ insert ข้อมูลเสร็จแล้ว โดยต้องสามารถบอกได้ว่า
+	> ข้อมูลเข้าทั้งหมดกี่ records
+	> ใช้เวลาในการทำทั้งหมดกี่ ms
+- OnBulkInsertGotError
+   อีเว้นจะเข้าเมื่อมี error เกิดขึ้นระหว่าง insert ต้องบอกได้ว่า
+	> เป็น exception อะไร
+	> ตายที่ record เท่าไหร่
+	> ข้อมูลที่ตายหน้าตายังไง(Person object)
+- OnBulkInsertInProgress
+  อีเว้นจะเข้าในระหว่างที่กำลังทำงานอยู่ โดยต้องบอกว่า
+	> ทำเสดแล้วกี่ records 
+	> มีทั้งหมดกี่ records
+
+
+เมื่อสร้างเสดให้ทดสอบโดยการ insert 1000 persons โดยใช้ ef ทำมะดาไม่ใช่ของกูด้วย project app console
+
+- เมื่อมีการกด key ใดๆ ให้เริ่ม insert แล้วต้องแสดงหน้าจอ progress bar แบบ ascii เช่น
+10% [##                    ]
+> เมื่อเสดต้องได้ 100% และ แสดงหน้าจอต่อด้านล่าง progressbar ดังนี้
+The n records has been inserted completely in n ms
+
+> ถ้าเกิด error ระหว่างทางให้แสดงหน้าจอด้านล่าง progress bar ดังนี้
+There is an error occurred at n(st/nd/rd/th) record, Person: {Person json string}
