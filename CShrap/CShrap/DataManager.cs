@@ -9,42 +9,28 @@ namespace CShrap
 {
     class DataManager
     {
-        public delegate void EventHandler (IEnumerable<Person> persons);
+        public event Action<int, string> OnBulkInsertCompleted;
+        public event Action<Exception, int, Person> OnBulkInsertGotError;
+        public event Action<int, int> OnBulkInsertInProgress;
 
-        public event EventHandler myEvent;
         public void BulkInsert(IEnumerable<Person> persons)
         {
-            //TODO: OnBulkInsertCompleted
-            foreach (Person person in persons)
-            {
-                try
+                for (int i = 0; i < persons.Count(); i++)
                 {
-                    //TODO: OnBulkInsertInProgress
-                    Console.Write("insert to database" + person.FirstName);
-
+                    try
+                    {
+                        //TODO:Insert To Database
+                        OnBulkInsertInProgress(i + 1, persons.Count() - (i + 1));
+                    }
+                    catch (Exception ex)
+                    {
+                        OnBulkInsertGotError(ex, i, persons.ToList()[i]);
+                        throw;
+                    }
                 }
-                catch (Exception e)
-                {
-                    //TODO: OnBulkInsertGotError
-                    Console.WriteLine(e);
-                    throw;
-                }
-            }
+            OnBulkInsertCompleted(persons.Count(), "1 minute");
         }
 
-        public void OnBulkInsertCompleted()
-        {
 
-        }
-
-        public void OnBulkInsertGotError()
-        {
-
-        }
-
-        public void OnBulkInsertInProgress()
-        {
-
-        }
     }
 }
