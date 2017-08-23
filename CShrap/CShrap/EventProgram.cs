@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CShrap.Model;
 using Newtonsoft.Json;
+using CShrap.Enum;
 
 namespace CShrap
 {
@@ -14,45 +15,30 @@ namespace CShrap
         private static DataManager _dataManager;
         public static void Main()
         {
-            int a = 0;
-            List<Person> persons = new List<Person>()
+            List<Person> persons = new List<Person>();
+            for (int i = 0; i < 100; i++)
             {
-                new Person
+                if (i == 2)
                 {
-                  Id = 1,
-                  FirstName = "Toon",
-                  LastName = "Naja",
-                  GenderId = 1
-                },
-                new Person
+                    Person personFail = new Person
+                    {
+                        LastName = "Bank",
+                        Gender = GenderType.Gay.ToString()
+                    };
+                    persons.Add(personFail);
+                    continue;
+                }
+
+                Person person = new Person
                 {
-                    Id = 2,
-                    FirstName = "Toon2",
-                    LastName = "Naja2",
-                    GenderId = 1
-                },
-                new Person
-                {
-                    Id = 3,
-                    FirstName = "Toon3",
-                    LastName = "Naja3",
-                    GenderId = 1
-                },
-                new Person
-                {
-                    Id = 4,
-                    FirstName = "Toon4",
-                    LastName = "Naja4",
-                    GenderId = 1
-                },
-                new Person
-                {
-                    Id = 5,
-                    FirstName = "Toon5",
-                    LastName = "Naja5",
-                    GenderId = 1
-                },
-            };
+                    FirstName = "Ajan",
+                    LastName = "Bank",
+                    Gender = GenderType.Gay.ToString()
+                };
+
+
+                persons.Add(person);
+            }
 
 
             _dataManager = new DataManager();
@@ -69,15 +55,16 @@ namespace CShrap
             Console.WriteLine($"Record finished: {recordFinished} Remain Record: {remainRecord}");
         }
 
-        private static void _dataManager_OnBulkInsertGotError(Exception exception, int recordFailed, Person personFailed)
+        private static void _dataManager_OnBulkInsertGotError(Type exceptionType, int recordFailed, Person personFailed)
         {
+            Console.WriteLine($"Exception Type: {exceptionType.Name}");
             Console.WriteLine($"There is an error occurred at {recordFailed}(st / nd / rd / th) record, Person: { JsonConvert.SerializeObject(personFailed) }");
 
         }
 
-        private static void _dataManager_OnBulkInsertCompleted(int totalRecord, string timeFinished)
+        private static void _dataManager_OnBulkInsertCompleted(int totalRecord, long timeFinished)
         {
-            Console.WriteLine($"The {totalRecord} records has been inserted completely in n {timeFinished}");
+            Console.Write($"The {totalRecord} records has been inserted completely in {timeFinished} ms");
         }
 
     }

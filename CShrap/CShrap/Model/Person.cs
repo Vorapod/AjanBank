@@ -1,3 +1,5 @@
+using CShrap.Enum;
+
 namespace CShrap.Model
 {
     using System.ComponentModel.DataAnnotations;
@@ -14,6 +16,6 @@ namespace CShrap.Model
         [StringLength(255)]
         public string LastName { get; set; }
 
-        public int GenderId { get; set; }
+        public string Gender { get; set; }
     }
 }

@@ -53,10 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataManager.cs" />
+    <Compile Include="Enum\GenderType.cs" />
     <Compile Include="EventProgram.cs" />
     <Compile Include="Model\AjanBank.cs" />
+    <Compile Include="DataManager.cs" />
     <Compile Include="Model\Person.cs" />
+    <Compile Include="Model\ProgressBar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
