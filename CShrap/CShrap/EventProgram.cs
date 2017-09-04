@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections;
+﻿using Event.Enum;
+using Event.Model;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CShrap.Model;
-using Newtonsoft.Json;
-using CShrap.Enum;
 
-namespace CShrap
+namespace Event
 {
     class MyTestApp
     {

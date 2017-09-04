@@ -1,4 +1,4 @@
-namespace CShrap.Model
+namespace Event.Model
 {
     using System;
     using System.Data.Entity;

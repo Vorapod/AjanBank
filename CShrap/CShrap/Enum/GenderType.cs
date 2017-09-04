@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CShrap.Enum
+﻿namespace Event.Enum
 {
     public enum GenderType
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CShrap.Model
+namespace Event.Model
 {
     public class InsertGotError : EventArgs
     {

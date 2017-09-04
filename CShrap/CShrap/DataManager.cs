@@ -1,10 +1,10 @@
-﻿using CShrap.Model;
+﻿using Event.Model;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 
-namespace CShrap
+namespace Event
 {
     class DataManager
     {

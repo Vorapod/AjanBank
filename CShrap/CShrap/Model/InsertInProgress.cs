@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CShrap.Model
+namespace Event.Model
 {
     public class InsertInProgress : EventArgs
     {

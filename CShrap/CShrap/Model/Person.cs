@@ -1,6 +1,6 @@
-using CShrap.Enum;
+using Event.Enum;
 
-namespace CShrap.Model
+namespace Event.Model
 {
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
