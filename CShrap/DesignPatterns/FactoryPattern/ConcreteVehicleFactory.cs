@@ -10,7 +10,7 @@ namespace FactoryPattern
             switch (type)
             {
                 case "Bike": return new Bike();
-                case "Scooter": return new Scooter();
+                case "Car": return new Car();
                 default: throw new ApplicationException(string.Format("Vehicle '{0}' cannot be created", type));
             }
         }

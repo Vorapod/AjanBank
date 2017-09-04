@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C6462405-588D-4FEA-9945-10AC9407E8AA}</ProjectGuid>
+    <ProjectGuid>{951C4962-DC28-47B2-AAC8-BEBB6F5A11BA}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>FactoryPattern</RootNamespace>
-    <AssemblyName>FactoryPattern</AssemblyName>
+    <RootNamespace>AbstractFactory</RootNamespace>
+    <AssemblyName>AbstractFactory</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,13 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConcreteVehicleFactory.cs" />
-    <Compile Include="IFactory.cs" />
+    <Compile Include="IBike.cs" />
+    <Compile Include="ICar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VehicleFactory.cs" />
-    <Compile Include="Vehicle\Car.cs" />
-    <Compile Include="Vehicle\Bike.cs" />
+    <Compile Include="IVehicleFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

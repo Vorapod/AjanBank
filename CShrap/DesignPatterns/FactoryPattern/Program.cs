@@ -11,7 +11,7 @@ namespace FactoryPattern
             IFactory productA = new Bike();
             Console.WriteLine($"{productA.GetVehicle()}");
 
-            IFactory productB = new Scooter();
+            IFactory productB = new Car();
             Console.WriteLine($"{productB.GetVehicle()}");
 
 

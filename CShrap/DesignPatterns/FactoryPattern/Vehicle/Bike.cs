@@ -8,7 +8,7 @@
     {
         public string GetVehicle()
         {
-            return "I'm a sport cars.";
+            return "I'm a bike.";
         }
     }
 }

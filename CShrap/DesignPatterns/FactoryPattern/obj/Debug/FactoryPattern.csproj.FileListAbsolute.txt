@@ -4,3 +4,4 @@ D:\Vorapod\LearningCSharp\CShrap\DesignPatterns\FactoryPattern\bin\Debug\Factory
 D:\Vorapod\LearningCSharp\CShrap\DesignPatterns\FactoryPattern\obj\Debug\FactoryPattern.csproj.CoreCompileInputs.cache
 D:\Vorapod\LearningCSharp\CShrap\DesignPatterns\FactoryPattern\obj\Debug\FactoryPattern.exe
 D:\Vorapod\LearningCSharp\CShrap\DesignPatterns\FactoryPattern\obj\Debug\FactoryPattern.pdb
+D:\Vorapod\LearningCSharp\CShrap\DesignPatterns\FactoryPattern\obj\Debug\FactoryPattern.csprojResolveAssemblyReference.cache

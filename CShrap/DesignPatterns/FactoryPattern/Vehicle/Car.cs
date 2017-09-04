@@ -4,11 +4,11 @@
     /// This is a class which implements the Product interface.
     /// </summary>
     /// <seealso cref="FactoryPattern.IFactory" />
-    class Scooter : IFactory
+    class Car : IFactory
     {
         public string GetVehicle()
         {
-            return "I'm a eco cars.";
+            return "I'm a cars.";
         }
     }
 }
