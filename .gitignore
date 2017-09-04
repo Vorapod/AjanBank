@@ -1,7 +1,9 @@
 CShrap/Generics/obj/
-CShrap/Delegate/obj/Debug/
 CShrap/Generics/bin/Debug/
+CShrap/Delegate/bin/
+CShrap/Delegate/obj/Debug/
 CShrap/packages/
 CShrap/CShrap/obj/
 CShrap/CShrap/bin/
-CShrap/Delegate/bin/
+CShrap/DesignPatterns/FactoryPattern/bin/Debug/
+CShrap/DesignPatterns/FactoryPattern/obj

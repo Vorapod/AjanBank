@@ -1,7 +1,0 @@
-D:\Vorapod\LearningCSharp\CShrap\FactoryMethod\bin\Debug\FactoryMethod.exe.config
-D:\Vorapod\LearningCSharp\CShrap\FactoryMethod\bin\Debug\FactoryMethod.exe
-D:\Vorapod\LearningCSharp\CShrap\FactoryMethod\bin\Debug\FactoryMethod.pdb
-D:\Vorapod\LearningCSharp\CShrap\FactoryMethod\obj\Debug\FactoryMethod.csprojResolveAssemblyReference.cache
-D:\Vorapod\LearningCSharp\CShrap\FactoryMethod\obj\Debug\FactoryMethod.csproj.CoreCompileInputs.cache
-D:\Vorapod\LearningCSharp\CShrap\FactoryMethod\obj\Debug\FactoryMethod.exe
-D:\Vorapod\LearningCSharp\CShrap\FactoryMethod\obj\Debug\FactoryMethod.pdb
