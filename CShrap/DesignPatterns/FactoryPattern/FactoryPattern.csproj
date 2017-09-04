@@ -47,8 +47,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VehicleFactory.cs" />
-    <Compile Include="Vehicle\EcoCar.cs" />
-    <Compile Include="Vehicle\SportCar.cs" />
+    <Compile Include="Vehicle\Scooter.cs" />
+    <Compile Include="Vehicle\Bike.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

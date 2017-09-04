@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FactoryPattern.Vehicle;
+﻿using FactoryPattern.Vehicle;
+using System;
 
 namespace FactoryPattern
 {
@@ -13,8 +9,8 @@ namespace FactoryPattern
         {
             switch (type)
             {
-                case "Sport": return new SportCar();
-                case "Eco": return new EcoCar();
+                case "Bike": return new Bike();
+                case "Scooter": return new Scooter();
                 default: throw new ApplicationException(string.Format("Vehicle '{0}' cannot be created", type));
             }
         }

@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FactoryPattern.Vehicle;
+﻿using FactoryPattern.Vehicle;
+using System;
 
 namespace FactoryPattern
 {
@@ -12,20 +8,20 @@ namespace FactoryPattern
         static void Main(string[] args)
         {
             //How is different
-            IFactory productA = new SportCar();
+            IFactory productA = new Bike();
             Console.WriteLine($"{productA.GetVehicle()}");
 
-            IFactory productB = new EcoCar();
+            IFactory productB = new Scooter();
             Console.WriteLine($"{productB.GetVehicle()}");
 
 
             VehicleFactory factory = new ConcreteVehicleFactory();
 
-            IFactory sportCar = factory.GetVehicle("Sport");
-            Console.WriteLine($"{sportCar.GetVehicle()}");
+            IFactory bike = factory.GetVehicle("Bike");
+            Console.WriteLine($"{bike.GetVehicle()}");
 
-            IFactory ecoCar = factory.GetVehicle("Eco");
-            Console.WriteLine($"{ecoCar.GetVehicle()}");
+            IFactory scooter = factory.GetVehicle("Scooter");
+            Console.WriteLine($"{scooter.GetVehicle()}");
 
             Console.ReadLine();
         }
