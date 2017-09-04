@@ -57,8 +57,9 @@
     <Compile Include="EventProgram.cs" />
     <Compile Include="Model\AjanBank.cs" />
     <Compile Include="DataManager.cs" />
+    <Compile Include="Model\InsertGotError.cs" />
+    <Compile Include="Model\InsertInProgress.cs" />
     <Compile Include="Model\Person.cs" />
-    <Compile Include="Model\ProgressBar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

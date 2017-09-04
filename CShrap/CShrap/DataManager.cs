@@ -1,19 +1,16 @@
-﻿using System;
+﻿using CShrap.Model;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CShrap.Model;
-using System.Threading;
 using System.Diagnostics;
+using System.Linq;
 
 namespace CShrap
 {
     class DataManager
     {
-        public event Action<int, long> OnBulkInsertCompleted;
-        public event Action<Type, int, Person> OnBulkInsertGotError;
-        public event Action<int, int> OnBulkInsertInProgress;
+        public event EventHandler OnBulkInsertCompleted;
+        public event EventHandler<InsertGotError> OnBulkInsertGotError;
+        public event EventHandler<InsertInProgress> OnBulkInsertInProgress;
         AjanBank _dbContext;
         public DataManager()
         {
@@ -21,57 +18,32 @@ namespace CShrap
         }
         public void BulkInsert(IEnumerable<Person> persons)
         {
-            Stopwatch watch = Stopwatch.StartNew();
-            long elapsedMs = default(long);
-
-            double percent = 0;
-            int i = 1;
-            int perProgress = 5;
-            int countWriteString = 0;
-            int lastPositionCursor = 0;
-            Console.SetCursorPosition(0, 0);
-            Console.Write("[");
-            Console.SetCursorPosition(21, 0);
-            Console.Write("]");
-
-
-            foreach (Person item in persons)
+            if (persons != null || persons.Count() > 0)
             {
-                try
+                for (int i = 0; i < persons.Count(); i++)
                 {
-                    _dbContext.People.Add(item);
-                    _dbContext.SaveChanges();
-
-                    percent = i / Convert.ToDouble(persons.Count()) * 100;
-                    countWriteString = Convert.ToInt32(percent) / perProgress;
-
-                    if (countWriteString > 0)
+                    try
                     {
-                        for (int y = 1; y <= countWriteString - lastPositionCursor; y++)
-                        {
-                            lastPositionCursor++;
-                            Console.SetCursorPosition(lastPositionCursor, 0);
-                            Console.Write("#");
-                        }
-                    }
-                    Console.SetCursorPosition(22, 0);
-                    Console.Write($"{percent}%");
-                }
-                catch (Exception ex)
-                {
-                    // -1 cause represent index of persons
-                    OnBulkInsertGotError(ex.GetType(), i - 1, item);
-                }
-                finally
-                {
-                    OnBulkInsertInProgress(i, persons.Count() - i);
-                    i++;
-                }
+                        _dbContext.People.Add(persons.ToList()[i]);
+                        _dbContext.SaveChanges();
 
+                        OnBulkInsertInProgress?.Invoke(this, new InsertInProgress
+                        {
+                            RecordFinished = i + 1
+                        });
+                    }
+                    catch (Exception e)
+                    {
+                        OnBulkInsertGotError?.Invoke(e.GetType(), new InsertGotError
+                        {
+                            ExceptionType = e.GetType(),
+                            Person = persons.ToList()[i],
+                            RecordFailed = i
+                        });
+                    }
+                }
             }
-            watch.Stop();
-            elapsedMs = watch.ElapsedMilliseconds;
-            OnBulkInsertCompleted(persons.Count(), elapsedMs);
+            OnBulkInsertCompleted?.Invoke(this, new EventArgs());
         }
 
 
