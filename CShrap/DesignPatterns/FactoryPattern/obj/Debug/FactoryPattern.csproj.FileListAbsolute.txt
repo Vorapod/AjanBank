@@ -1,0 +1,6 @@
+D:\Vorapod\LearningCSharp\CShrap\DesignPatterns\FactoryPattern\obj\Debug\FactoryPattern.csproj.CoreCompileInputs.cache
+D:\Vorapod\LearningCSharp\CShrap\DesignPatterns\FactoryPattern\bin\Debug\FactoryPattern.exe.config
+D:\Vorapod\LearningCSharp\CShrap\DesignPatterns\FactoryPattern\bin\Debug\FactoryPattern.exe
+D:\Vorapod\LearningCSharp\CShrap\DesignPatterns\FactoryPattern\bin\Debug\FactoryPattern.pdb
+D:\Vorapod\LearningCSharp\CShrap\DesignPatterns\FactoryPattern\obj\Debug\FactoryPattern.exe
+D:\Vorapod\LearningCSharp\CShrap\DesignPatterns\FactoryPattern\obj\Debug\FactoryPattern.pdb
