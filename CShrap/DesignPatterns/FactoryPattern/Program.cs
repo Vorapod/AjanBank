@@ -7,21 +7,21 @@ namespace FactoryPattern
     {
         static void Main(string[] args)
         {
-            //How is different
-            IFactory productA = new Bike();
-            Console.WriteLine($"{productA.GetVehicle()}");
+            //TODO:How is different
+            IFactory fac = new Bike();
+            Console.WriteLine($"{fac.GetVehicle()}");
 
-            IFactory productB = new Car();
-            Console.WriteLine($"{productB.GetVehicle()}");
+            fac = new Car();
+            Console.WriteLine($"{fac.GetVehicle()}");
 
 
-            VehicleFactory factory = new ConcreteVehicleFactory();
+            VehicleFactory vehicel = new ConcreteVehicleFactory();
 
-            IFactory bike = factory.GetVehicle("Bike");
-            Console.WriteLine($"{bike.GetVehicle()}");
+            IFactory factory = vehicel.GetVehicle("Bike");
+            Console.WriteLine($"{factory.GetVehicle()}");
 
-            IFactory scooter = factory.GetVehicle("Scooter");
-            Console.WriteLine($"{scooter.GetVehicle()}");
+            factory = vehicel.GetVehicle("Scooter");
+            Console.WriteLine($"{factory.GetVehicle()}");
 
             Console.ReadLine();
         }
