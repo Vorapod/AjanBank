@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{951C4962-DC28-47B2-AAC8-BEBB6F5A11BA}</ProjectGuid>
+    <ProjectGuid>{65FE7A66-E0D1-464B-97AB-A1F8B77720DA}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>AbstractFactory</RootNamespace>
-    <AssemblyName>AbstractFactory</AssemblyName>
+    <RootNamespace>Singleton</RootNamespace>
+    <AssemblyName>Singleton</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,22 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bikes\MotorBikeHonda.cs" />
-    <Compile Include="Bikes\MotorBikeYamaha.cs" />
-    <Compile Include="Bikes\RegularBikeYamaha.cs" />
-    <Compile Include="Bikes\RegularBikeHonda.cs" />
-    <Compile Include="Cars\EcoCarHonda.cs" />
-    <Compile Include="Cars\EcoCarYamaha.cs" />
-    <Compile Include="Cars\SportCarYamaha.cs" />
-    <Compile Include="Factory\YamahaFactory.cs" />
-    <Compile Include="Factory\HondaFactory.cs" />
-    <Compile Include="Interface\IBike.cs" />
-    <Compile Include="Interface\ICar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Interface\IVehicleFactory.cs" />
-    <Compile Include="Cars\SportCarHonda.cs" />
-    <Compile Include="VehicleClient.cs" />
+    <Compile Include="Singleton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

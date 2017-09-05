@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AbstractFactory
+namespace AbstractFactory.Interface
 {
-    interface IBike
+    public interface IBike
     {
+        string Name();
     }
 }

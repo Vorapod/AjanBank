@@ -9,5 +9,6 @@ CShrap/DesignPatterns/FactoryPattern/bin/Debug/
 CShrap/DesignPatterns/FactoryPattern/obj
 CShrap/.vs
 CShrap/DesignPatterns/AbstractFactory/bin
-/CShrap/DesignPatterns/AbstractFactory/obj
-/CShrap/.vs
+CShrap/DesignPatterns/AbstractFactory/obj
+CShrap/DesignPatterns/Singleton/bin
+CShrap/DesignPatterns/Singleton/obj
