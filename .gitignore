@@ -12,3 +12,4 @@ CShrap/DesignPatterns/AbstractFactory/bin
 CShrap/DesignPatterns/AbstractFactory/obj
 CShrap/DesignPatterns/Singleton/bin
 CShrap/DesignPatterns/Singleton/obj
+*.cd

@@ -7,7 +7,7 @@ using AbstractFactory.Interface;
 
 namespace AbstractFactory.Bikes
 {
-    class MotorBikeYamaha : IBike
+    class ElectricBikeYamaha : IBike
     {
         public string Name()
         {

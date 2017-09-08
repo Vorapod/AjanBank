@@ -2,7 +2,7 @@
 
 namespace AbstractFactory.Bikes
 {
-    class MotorBikeHonda : IBike
+    class ElectricBikeHonda : IBike
     {
         public string Name()
         {

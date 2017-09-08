@@ -7,14 +7,6 @@ namespace FactoryPattern
     {
         static void Main(string[] args)
         {
-            //TODO:How is different
-            IFactory fac = new Bike();
-            Console.WriteLine($"{fac.GetVehicle()}");
-
-            fac = new Car();
-            Console.WriteLine($"{fac.GetVehicle()}");
-
-
             VehicleFactory vehicel = new ConcreteVehicleFactory();
 
             IFactory factory = vehicel.GetVehicle("Bike");
