@@ -22,12 +22,12 @@ namespace Event
             _watch = new Stopwatch();
             Console.SetCursorPosition(0, 0);
             Console.Write("[");
-            Console.SetCursorPosition(21, 0);
+            Console.SetCursorPosition(20, 0);
             Console.Write("]");
 
 
             List<Person> persons = new List<Person>();
-            for (int i = 0; i < 23; i++)
+            for (int i = 0; i < 100; i++)
             {
                 //if (i == 2)
                 //{
@@ -62,9 +62,8 @@ namespace Event
 
         private static void _dataManager_OnBulkInsertInProgress(object sender, InsertInProgress e)
         {
-            _percent = (e.RecordFinished + 1) / Convert.ToDouble(_totalRecord) * 100;
+            _percent = (e.RecordFinished) / Convert.ToDouble(_totalRecord) * 100;
             _countWriteString = Convert.ToInt32(_percent) / ROW_FOR_WRITE;
-
 
             if (_countWriteString > 0)
             {
@@ -78,7 +77,7 @@ namespace Event
 
             Console.SetCursorPosition(22, 0);
             Console.Write($"{_percent.ToString("##")}%");
-
+            Console.WriteLine();
             Console.WriteLine($"Record finished: {e.RecordFinished} Remain Record: {_totalRecord - e.RecordFinished}");
         }
 
