@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Event
 {
-    class DataManager
+    class DataManager : IDisposable
     {
         public event EventHandler OnBulkInsertCompleted;
         public event EventHandler<InsertGotError> OnBulkInsertGotError;
@@ -46,6 +46,22 @@ namespace Event
             OnBulkInsertCompleted?.Invoke(this, new EventArgs());
         }
 
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
 
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                OnBulkInsertCompleted = null;
+                OnBulkInsertGotError = null;
+                OnBulkInsertInProgress = null;
+            }
+
+            _dbContext = null;
+        }
     }
 }

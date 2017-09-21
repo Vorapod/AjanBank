@@ -20,6 +20,8 @@ namespace Event
         public static void Main()
         {
             _watch = new Stopwatch();
+            _dataManager = new DataManager();
+
             Console.SetCursorPosition(0, 0);
             Console.Write("[");
             Console.SetCursorPosition(20, 0);
@@ -50,12 +52,14 @@ namespace Event
             }
             _totalRecord = + persons.Count;
 
-            _dataManager = new DataManager();
+            
             _dataManager.OnBulkInsertCompleted += _dataManager_OnBulkInsertCompleted;
             _dataManager.OnBulkInsertGotError += _dataManager_OnBulkInsertGotError;
             _dataManager.OnBulkInsertInProgress += _dataManager_OnBulkInsertInProgress;
             _dataManager.BulkInsert(persons);
             _watch = Stopwatch.StartNew();
+            _dataManager.Dispose();
+
 
             Console.ReadKey();
         }
@@ -92,5 +96,9 @@ namespace Event
             long elapsedMs = _watch.ElapsedMilliseconds;
             Console.WriteLine($"Finished: {elapsedMs}");
         }
+
+
+
+
     }
 }
