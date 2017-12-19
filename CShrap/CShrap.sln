@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.12
+VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Event", "CShrap\Event.csproj", "{A7A6DE68-787D-4701-A123-D1BFFECF4C97}"
 EndProject
@@ -22,6 +22,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Structural", "Structural", "{47C40DCD-7831-4118-9D24-28098C926968}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Behavioral", "Behavioral", "{9D436F41-B7EC-41C2-A3DA-C86C952CD510}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asynchronous", "Asynchronous\Asynchronous.csproj", "{9C0C496F-68DB-4968-A910-8E6B6DF6DCD5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,10 @@ Global
 		{65FE7A66-E0D1-464B-97AB-A1F8B77720DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65FE7A66-E0D1-464B-97AB-A1F8B77720DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65FE7A66-E0D1-464B-97AB-A1F8B77720DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C0C496F-68DB-4968-A910-8E6B6DF6DCD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C0C496F-68DB-4968-A910-8E6B6DF6DCD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C0C496F-68DB-4968-A910-8E6B6DF6DCD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C0C496F-68DB-4968-A910-8E6B6DF6DCD5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
