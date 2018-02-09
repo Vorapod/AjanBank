@@ -1,6 +1,7 @@
 ﻿using Delegate.Model;
 namespace Delegate
 {
+    //Convert แบบไม่ใช่ Delegate
     public abstract class GodOfConvert<TIn, TOut>
     {
         protected abstract TOut Convert(TIn source);

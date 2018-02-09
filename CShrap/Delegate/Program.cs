@@ -1,13 +1,10 @@
-﻿using System;
+﻿using Delegate.Model;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Delegate.Model;
 
 namespace Delegate
 {
-    public delegate TOutput Converter<TInput, TOutput>(TInput from);
+    public delegate TOutput ConverterByMySelf<TInput, TOutput>(TInput from);
 
     class Program
     {
@@ -30,7 +27,11 @@ namespace Delegate
 
             Console.WriteLine("=====================================");
 
-            List<FuckYou> fuckYouList = new Converter<List<FuckMe>, List<FuckYou>>(mes => FuckMeListToFuckYouList(mes))(fuckMeList);
+            List<FuckYou> fuckYouList =
+                new ConverterByMySelf<List<FuckMe>, List<FuckYou>>(mes => FuckMeListToFuckYouList(mes))(fuckMeList);
+
+            ConverterByMySelf<List<FuckMe>, List<FuckYou>> processConvert = FuckMeListToFuckYouList;
+            List<FuckYou> result = processConvert(fuckMeList);
 
             foreach (FuckYou f in fuckYouList)
             {
@@ -40,9 +41,6 @@ namespace Delegate
             }
 
             Console.WriteLine("==============  Not Use delegate =======================");
-
-
-
             Console.ReadLine();
         }
 
@@ -63,6 +61,11 @@ namespace Delegate
             }
 
             return result;
+        }
+
+        public static string Test(int input)
+        {
+            return input + "Test";
         }
 
     }
