@@ -32,6 +32,8 @@ namespace Specflow.Steps
             {
                 _data = table;
             }
+            //Calculator.Value1 = Convert.ToDouble(_data.Rows[0]["Value1"]);
+            //Calculator.Value2 = Convert.ToDouble(_data.Rows[0]["Value2"]);
         }
 
         [When(@"I ""(.*)""")]

@@ -9,7 +9,6 @@ Scenario: Caculator process Plus
 	And I have entered 70 into the calculator of Value2
 	When I "Plus"
 	Then the result should be 120
-
 Scenario Outline: Caculator process Plus by Excel
 	Given I have entered values from excel into the calculator
 	| Value1   | Value2   |
