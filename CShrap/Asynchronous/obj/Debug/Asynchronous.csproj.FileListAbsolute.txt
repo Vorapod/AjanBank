@@ -4,3 +4,10 @@ D:\AjanBank\CShrap\Asynchronous\bin\Debug\Asynchronous.pdb
 D:\AjanBank\CShrap\Asynchronous\obj\Debug\Asynchronous.csprojResolveAssemblyReference.cache
 D:\AjanBank\CShrap\Asynchronous\obj\Debug\Asynchronous.exe
 D:\AjanBank\CShrap\Asynchronous\obj\Debug\Asynchronous.pdb
+D:\Vorapod\Practice\CShrap\Asynchronous\bin\Debug\Asynchronous.exe.config
+D:\Vorapod\Practice\CShrap\Asynchronous\bin\Debug\Asynchronous.exe
+D:\Vorapod\Practice\CShrap\Asynchronous\bin\Debug\Asynchronous.pdb
+D:\Vorapod\Practice\CShrap\Asynchronous\obj\Debug\Asynchronous.csprojResolveAssemblyReference.cache
+D:\Vorapod\Practice\CShrap\Asynchronous\obj\Debug\Asynchronous.csproj.CoreCompileInputs.cache
+D:\Vorapod\Practice\CShrap\Asynchronous\obj\Debug\Asynchronous.exe
+D:\Vorapod\Practice\CShrap\Asynchronous\obj\Debug\Asynchronous.pdb
