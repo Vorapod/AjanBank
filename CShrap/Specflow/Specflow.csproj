@@ -65,6 +65,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Features\Calculator.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Features\Plus.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Plus.feature.cs</LastGenOutput>

@@ -8,6 +8,7 @@ namespace Specflow.Steps
     public class SpecFlowFeature1Steps
     {
         private double _result;
+        private Table _data;
 
         [Given(@"I have entered (.*) into the calculator of Value(\d+)")]
 
@@ -21,6 +22,15 @@ namespace Specflow.Steps
                 case 2:
                     Calculator.Value2 = value;
                     break;
+            }
+        }
+
+        [Given(@"I have entered values from excel into the calculator")]
+        public void GivenIHaveEnteredValuesFromExcelIntoTheCalculator(Table table)
+        {
+            if (_data == null)
+            {
+                _data = table;
             }
         }
 
@@ -50,4 +60,7 @@ namespace Specflow.Steps
             Assert.AreEqual(result, _result);
         }
     }
+
+
+
 }
