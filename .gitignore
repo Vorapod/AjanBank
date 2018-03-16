@@ -13,3 +13,6 @@ CShrap/DesignPatterns/AbstractFactory/obj
 CShrap/DesignPatterns/Singleton/bin
 CShrap/DesignPatterns/Singleton/obj
 *.cd
+/CShrap/Specflow/bin
+obj
+bin
