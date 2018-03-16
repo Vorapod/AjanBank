@@ -14,7 +14,7 @@ Scenario Outline: Caculator process Plus by Excel
 	| Value1   | Value2   |
 	| <value1> | <value2> |
 	When I "Plus"
-	Then the result should be 120
+	Then the result should be <result>
 
 @source:Calculator.xlsx:Plus
 Examples:
