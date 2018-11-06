@@ -43,23 +43,15 @@ namespace Asynchronous
         {
             string file = @"D:\AjanBank\CShrap\Asynchronous\message.txt";
             Console.WriteLine("HandleFile enter");
-            int count = 0;
 
             using (StreamReader reader = new StreamReader(file))
             {
                 string msg = await reader.ReadToEndAsync();
-                count += msg.Length;
 
-                for (int i = 0; i < 100001; i++)
-                {
-                    if (i == 100000)
-                    {
-                        count--;
-                        //throw new Exception("ErrorFromToon");
-                    }
-                }
+                await Task.Delay(10000);
+
                 Console.WriteLine("HandleFile exit");
-                return count;
+                return msg.Length; ;
             }
         }
     }

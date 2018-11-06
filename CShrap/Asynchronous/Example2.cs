@@ -1,50 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Asynchronous
 {
     class Example2
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            while(true)
-            {
-                //Start computation
-                Example();
+            Task<int> longRunningTask = LongRunningOperationAsync();
+            // independent work which doesn't need the result of LongRunningOperationAsync can be done here
 
-                //Handle user input.
-                string result = Console.ReadLine();
-                Console.WriteLine("You typed: " + result);
-            }
+            //and now we call await on the task 
+            int result = await longRunningTask;
+            //use the result 
+            Console.WriteLine(result);
         }
 
-        private async static void Example()
+        public static async Task<int> LongRunningOperationAsync()
         {
-            // This is method runs asynchronously.
-            int t = await Task.Run(() => Allocate());
-            Console.WriteLine("Compute: " + t);
-        }
-
-        private static int Allocate()
-        {
-            // Compute total count of digits in strings.
-            int size = 0;
-            for (int z = 0; z < 100; z++)
-            {
-                for (int i = 0; i < 1000000; i++)
-                {
-                    string value = i.ToString();
-                    if (value == null)
-                    {
-                        return 0;
-                    }
-                    size += value.Length;
-                }
-            }
-            return size;
+            await Task.Delay(5000);
+            return 1;
         }
     }
 }
