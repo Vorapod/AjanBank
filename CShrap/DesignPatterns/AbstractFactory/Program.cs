@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AbstractFactory.Factory;
+﻿using AbstractFactory.Factory;
 using AbstractFactory.Interface;
+using System;
 
 namespace AbstractFactory
 {
-    class Program
+    /// <summary>
+    /// Creates an instance of several families of classes
+    /// </summary>
+    internal class Program
     {
         static void Main(string[] args)
         {

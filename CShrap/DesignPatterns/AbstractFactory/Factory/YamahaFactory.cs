@@ -13,7 +13,7 @@ namespace AbstractFactory.Factory
             {
                 case "Regular":
                     return new RegularBikeYamaha();
-                case "Sport":
+                case "Electric":
                     return new ElectricBikeYamaha();
                 default:
                     throw new ApplicationException(string.Format("Vehicle '{0}' cannot be created", bike));
@@ -23,7 +23,7 @@ namespace AbstractFactory.Factory
         {
             switch (car)
             {
-                case "Regular":
+                case "Eco":
                     return new EcoCarYamaha();
                 case "Sport":
                     return new SportCarYamaha();

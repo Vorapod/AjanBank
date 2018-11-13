@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace Asynchronous
 {
-    class Example2
+    static class Example2
     {
         static async Task Main(string[] args)
         {

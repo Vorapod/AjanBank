@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{951C4962-DC28-47B2-AAC8-BEBB6F5A11BA}</ProjectGuid>
+    <ProjectGuid>{27A2B0F1-40DD-4932-B3A8-EA7850EF5FE1}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>AbstractFactory</RootNamespace>
     <AssemblyName>AbstractFactory</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>AbstractFactory.Program</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -45,25 +43,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bikes\ElectricBikeHonda.cs" />
-    <Compile Include="Bikes\ElectricBikeYamaha.cs" />
-    <Compile Include="Bikes\RegularBikeYamaha.cs" />
-    <Compile Include="Bikes\RegularBikeHonda.cs" />
-    <Compile Include="Cars\EcoCarHonda.cs" />
-    <Compile Include="Cars\EcoCarYamaha.cs" />
-    <Compile Include="Cars\SportCarYamaha.cs" />
-    <Compile Include="Factory\YamahaFactory.cs" />
-    <Compile Include="Factory\HondaFactory.cs" />
-    <Compile Include="Interface\IBike.cs" />
-    <Compile Include="Interface\ICar.cs" />
+    <Compile Include="Cat\PersianFarmXyz.cs" />
+    <Compile Include="Cat\PersianFarmAbc.cs" />
+    <Compile Include="Dog\BulldogFarmAbc.cs" />
+    <Compile Include="Dog\BulldogFarmXyz.cs" />
+    <Compile Include="Dog\GoldenFarmXyz.cs" />
+    <Compile Include="Dog\GoldenFarmAbc.cs" />
+    <Compile Include="Enum\EnumColor.cs" />
+    <Compile Include="FarmClient.cs" />
+    <Compile Include="Farm\XyzFarm.cs" />
+    <Compile Include="Farm\AbcFarm.cs" />
+    <Compile Include="Interface\IFarm.cs" />
+    <Compile Include="Interface\ICat.cs" />
+    <Compile Include="Interface\IDog.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Interface\IVehicleFactory.cs" />
-    <Compile Include="Cars\SportCarHonda.cs" />
-    <Compile Include="VehicleClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
