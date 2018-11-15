@@ -1,4 +1,4 @@
-﻿namespace FactoryPattern
+﻿namespace Factory
 {
     public abstract class VehicleFactory
     {

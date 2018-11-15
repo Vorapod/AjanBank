@@ -1,7 +1,7 @@
-﻿using FactoryPattern.Vehicle;
+﻿using Factory.Vehicle;
 using System;
 
-namespace FactoryPattern
+namespace Factory
 {
     class Program
     {
