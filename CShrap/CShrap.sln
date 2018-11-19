@@ -41,7 +41,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Document", "Document", "{B1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factory", "Factory\Factory.csproj", "{E7683232-FF38-4546-8433-F31F3475190F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototype", "Prototype\Prototype.csproj", "{CCAF9CCF-287C-47AE-9BA0-356EB8156662}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototype", "DesignPatterns\Prototype\Prototype.csproj", "{CCAF9CCF-287C-47AE-9BA0-356EB8156662}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
