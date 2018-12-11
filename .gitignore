@@ -16,3 +16,4 @@ CShrap/DesignPatterns/Singleton/obj
 /CShrap/Specflow/bin
 obj
 bin
+/DotNetCore/TodoApi/.vs
